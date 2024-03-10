@@ -2,7 +2,7 @@ package org.example;
 
 import java.awt.*;
 
-public  class HazineSandigi {
+public class HazineSandigi {
 
     private int boyutX;
     private int boyutY;

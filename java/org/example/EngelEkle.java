@@ -13,7 +13,7 @@ public class EngelEkle {
 
     Random random = new Random();
     private int MaxEngelSayisiHareketsiz = 20;
-    private int MaxEngelSayisiHareketli = 3;
+    private int MaxEngelSayisiHareketli = 5;
 
     ArrayList<Engel> engellerList = new ArrayList<>();
 
@@ -42,6 +42,8 @@ public class EngelEkle {
             engellerList.add(RastgeleDag());
             engellerList.add(RastgeleDuvar());
             engellerList.add(RastgeleKaya());
+            engellerList.add(RastgeleAri());
+            engellerList.add(RastgeleKus());
         }
 
         // Geri kalan engelleri rastgele oluştur
@@ -65,7 +67,7 @@ public class EngelEkle {
         }
 
         // Hareketli engelleri ekleyelim
-        for (int i = 0; i < MaxEngelSayisiHareketli; i++) {
+        for (int i = 0; i < MaxEngelSayisiHareketli-4; i++) {
             int rastgeleEngelTur = random.nextInt(2); // 2 farklı hareketli engel türü için rastgele bir sayı üret
             switch (rastgeleEngelTur){
                 case 0:

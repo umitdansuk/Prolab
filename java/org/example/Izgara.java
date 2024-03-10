@@ -42,6 +42,9 @@ public class Izgara extends JPanel  {
         timer.start(); // Timer'ı başlat
 
     }
+    public void temizle() {
+        repaint();
+    }
     private void hareketliEngelleriHareketEttir() {
         EngelEkle engelEkle = EngelEkle.engelEkleGetir();
         for (Engel engel : engelEkle.engellerList) {
@@ -116,6 +119,13 @@ public class Izgara extends JPanel  {
 
     }
 
+    private Image getImageForKarakter(Karakter karakter) throws IOException {
+
+
+            return ImageIO.read(new File("C:\\Java intelij\\Prolabb2Proje1\\resim\\foto\\mario.png"));
+
+    }
+
 
     private void resimCiz(Graphics g) throws IOException {
         EngelEkle engelEkle = EngelEkle.engelEkleGetir();
@@ -131,12 +141,21 @@ public class Izgara extends JPanel  {
         HazineEkle hazineEkle = HazineEkle.hazineEkleGetir();
 
         for (HazineSandigi hazineSandigi : hazineEkle.hazineList) {
-
             Image orjinalResim = getImageForHazine(hazineSandigi);
             Image olcekliResim = resmiOlceklendirHazine(orjinalResim, hazineSandigi);
-
             g.drawImage(olcekliResim, hazineSandigi.getKonum().x, hazineSandigi.getKonum().y, null);
         }
+
+
+        KarakterEkle karakterEkle = KarakterEkle.KarakterEkleGetir();
+        Karakter karakter = karakterEkle.karakterEkle();
+
+            Image orjinalResim = getImageForKarakter(karakter);
+            Image olcekliResim = resmiOlceklendirKarakter(orjinalResim, karakter);
+
+            g.drawImage(olcekliResim, karakter.getKonum().x, karakter.getKonum().y, null);
+
+
 
     }
 
@@ -151,6 +170,10 @@ public class Izgara extends JPanel  {
         return olcekliResim ;
     }
 
+    private Image resmiOlceklendirKarakter (Image image , Karakter karakter) {
+        Image olcekliResim = image.getScaledInstance(karakter.getBoyutX() * kareGenisligi , karakter.getBoyutY() * kareGenisligi,Image.SCALE_SMOOTH);
+        return olcekliResim ;
+    }
 
 
 
