@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.border.LineBorder;
+import java.util.List ;
 
 public class Izgara extends JPanel  {
 
@@ -25,13 +26,14 @@ public class Izgara extends JPanel  {
     private int sutun;
     private byte [][] izgaraMatris ;
 
+    List <Point> patika ;
+
     private Izgara(int satir, int sutun , byte kareGenisligi) {
         this.satir = satir;
         this.sutun=sutun;
         this.kareGenisligi = kareGenisligi ;
         random = new Random () ;
         izgaraMatris = new byte [satir][sutun] ;
-
         timer = new Timer(TIMER_DELAY, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -74,7 +76,7 @@ public class Izgara extends JPanel  {
         catch (IOException ex) {
             ex.printStackTrace();
         }
-
+        patikayiCiz(g);
     }
 
     private void kareleriCiz (Graphics g) {
@@ -256,7 +258,13 @@ public class Izgara extends JPanel  {
         return true;
     }
 
-
+    public void patikayiCiz (Graphics graphics) {
+        if (patika != null) {
+            for (Point lokasyon : patika) {
+                graphics.fillRect(lokasyon.x, lokasyon.y, kareGenisligi,kareGenisligi);
+            }
+        }
+    }
 
 
     public ArrayList<Point> getKullanilanKonumlar() {
@@ -270,6 +278,18 @@ public class Izgara extends JPanel  {
 
     public int getSatir() {
         return satir;
+    }
+
+    public void setPatika (List<Point> patika) {
+        this.patika = patika ;
+    }
+
+    public int getBirimSatir () {
+        return satir / kareGenisligi ;
+    }
+
+    public int getBirimSutun () {
+        return sutun / kareGenisligi ;
     }
 
     public byte getKareGenisligi () {
