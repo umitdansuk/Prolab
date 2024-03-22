@@ -90,17 +90,17 @@ public class Izgara extends JPanel  {
     private Image getImageForEngel(Engel engel) throws IOException {
 
         if (engel instanceof Agac)
-            return  ImageIO.read(new File("C:\\Java intelij\\Prolabb2Proje1\\resim\\foto\\agac.png"));
+            return  ImageIO.read(new File("C:\\Users\\PC\\Desktop\\Prolab2345\\fotolar\\agac.png"));
         else if (engel instanceof Kaya)
-            return  ImageIO.read(new File("C:\\Java intelij\\Prolabb2Proje1\\resim\\foto\\kayaa.jpg"));
+            return  ImageIO.read(new File("C:\\Users\\PC\\Desktop\\Prolab2345\\fotolar\\kaya.jpg"));
         else if (engel instanceof Duvar)
-            return ImageIO.read(new File("C:\\Java intelij\\Prolabb2Proje1\\resim\\foto\\duvar.jpg"));
+            return ImageIO.read(new File("C:\\Users\\PC\\Desktop\\Prolab2345\\fotolar\\duvar.jpg"));
         else if (engel instanceof Dag)
-            return ImageIO.read(new File("C:\\Java intelij\\Prolabb2Proje1\\resim\\foto\\daaag.png"));
+            return ImageIO.read(new File("C:\\Users\\PC\\Desktop\\Prolab2345\\fotolar\\dag.png"));
         else if (engel instanceof Ari)
-            return  ImageIO.read(new File("C:\\Java intelij\\Prolabb2Proje1\\resim\\foto\\ariiii.jpg"));
+            return  ImageIO.read(new File("C:\\Users\\PC\\Desktop\\Prolab2345\\fotolar\\ari.png"));
         else if (engel instanceof Kus)
-            return  ImageIO.read(new File("C:\\Java intelij\\Prolabb2Proje1\\resim\\foto\\kus.jpg"));
+            return  ImageIO.read(new File("C:\\Users\\PC\\Desktop\\Prolab2345\\fotolar\\kus.png"));
 
         else return null ;
 
@@ -109,13 +109,13 @@ public class Izgara extends JPanel  {
     private Image getImageForHazine(HazineSandigi hazineSandigi) throws IOException {
 
           if (hazineSandigi instanceof Altin)
-            return ImageIO.read(new File("C:\\Java intelij\\Prolabb2Proje1\\resim\\foto\\altin.jpg"));
+            return ImageIO.read(new File("C:\\Users\\PC\\Desktop\\Prolab2345\\fotolar\\altin.jpg"));
         else if (hazineSandigi instanceof Zümrüt)
-            return ImageIO.read(new File("C:\\Java intelij\\Prolabb2Proje1\\resim\\foto\\zümrüt.jpg"));
+            return ImageIO.read(new File("C:\\Users\\PC\\Desktop\\Prolab2345\\fotolar\\zümrüt.jpg"));
         else if (hazineSandigi instanceof Gümüs)
-            return  ImageIO.read(new File("C:\\Java intelij\\Prolabb2Proje1\\resim\\foto\\gümüs.jpg"));
+            return  ImageIO.read(new File("C:\\Users\\PC\\Desktop\\Prolab2345\\fotolar\\gumus.jpg"));
         else if (hazineSandigi instanceof Bakir)
-            return  ImageIO.read(new File("C:\\Java intelij\\Prolabb2Proje1\\resim\\foto\\bakir.jpg"));
+            return  ImageIO.read(new File("C:\\Users\\PC\\Desktop\\Prolab2345\\fotolar\\bakir.jpg"));
 
         else return null ;
 
@@ -124,7 +124,7 @@ public class Izgara extends JPanel  {
     private Image getImageForKarakter(Karakter karakter) throws IOException {
 
 
-            return ImageIO.read(new File("C:\\Java intelij\\Prolabb2Proje1\\resim\\foto\\mario.png"));
+            return ImageIO.read(new File("C:\\Users\\PC\\Desktop\\Prolab2345\\fotolar\\casper.jpg"));
 
     }
 
